@@ -1,0 +1,13 @@
+{
+    "config": {
+        "bin-dir": "bin"
+    },
+    "require-dev": {
+        "phing/phing": "*@stable",
+        "phpunit/dbunit": "*@stable",
+        "phpunit/phpunit": "*@stable",
+        "behat/behat": "*@stable",
+        "guzzle/guzzle": "*@stable"
+    }
+}
+

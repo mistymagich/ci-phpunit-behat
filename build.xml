@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="swgn" default="none">
+    <target name="none">
+        <echo msg="Usage:" />
+        <echo msg="./composer/bin/phing composer" />
+        <echo msg="./composer/bin/phing behat" />
+        <echo msg="./composer/bin/phing phpunit" />
+    </target>
+    <target name="composer">
+        <exec command="./composer/composer.phar --ansi update -d composer" passthru="true" />
+    </target>
+    <target name="behat">
+        <exec command="./composer/bin/behat --ansi" passthru="ture"  />
+    </target>
+    <target name="phpunit">
+        <phpunit printsummary="ture" configuration="tests/phpunit.xml">
+            <batchtest>
+                <fileset dir=".">
+                    <include name="models/*Test.php"/>
+                    <include name="bugs/*Test.php"/>
+                </fileset>
+            </batchtest>
+        </phpunit>
+    </target>
+</project>

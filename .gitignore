@@ -1,5 +1,8 @@
-*/config/development
-*/logs/log-*.php
-*/logs/!index.html
-*/cache/*
-*/cache/!index.html
+application/logs/log-*.php
+application/logs/php_error
+application/logs/!index.html
+application/cache/*
+application/cache/!index.html
+composer/bin
+composer/vendor
+composer/composer.lock
